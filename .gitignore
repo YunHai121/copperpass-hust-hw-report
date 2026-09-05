@@ -1,0 +1,59 @@
+# ============================================================
+# 私密信息防护（密钥 / 凭证 / 个人信息）
+# ============================================================
+
+# --- API 密钥、令牌、凭证文件 ---
+.env
+.env.*
+*.env
+!.env.example
+*credential*
+*secret*
+*token*
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*_rsa
+id_ed25519*
+id_rsa*
+gh-token*
+oauth*
+*.oauth
+
+# --- gh CLI / API 调用产生的临时文件 ---
+.gh_payload.json
+.gh_*
+.ghpr*
+gh-session*
+
+# --- GitHub CLI / git 本地状态（绝不入库） ---
+.git/
+!.gitignore
+
+# --- 含个人信息的报告产物（真实姓名/学号/电话/邮箱） ---
+# 编译出的 PDF 一律不入库；包示例 example.pdf 例外（内容为虚构样例）
+*.pdf
+!example.pdf
+!thumbnail.pdf
+
+# --- Typst / 编辑器缓存 ---
+.cache/
+.parcel-cache/
+
+# ============================================================
+# 编辑器与系统文件
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.log
