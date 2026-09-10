@@ -1,6 +1,6 @@
-# hust-hw-report
+# copperpass-hust-hw-report
 
-[![Typst Universe](https://img.shields.io/badge/Typst-Universe-239DAD)](https://typst.app/universe/package/hust-hw-report/)
+[![Typst Universe](https://img.shields.io/badge/Typst-Universe-239DAD)](https://typst.app/universe/package/copperpass-hust-hw-report/)
 
 华中科技大学《硬件综合训练》课程设计报告的 Typst 模板。依据课程发布的
 《硬件综合训练报告模板（2026-8-3 修订版）》Word 文档逐项还原：封面、红色页眉、
@@ -27,7 +27,7 @@ typst compile main.typ
 ## 用法
 
 ```typst
-#import "@preview/hust-hw-report:0.1.0": *
+#import "@preview/copperpass-hust-hw-report:0.1.0": *
 
 #show: report.with(
   title: "5段流水CPU设计",        // 题目
@@ -49,7 +49,7 @@ typst compile main.typ
 === 三级标题
 ==== 条目标题（自动编号（1）（2）……）
 
-#fig("assets/demo.png", caption: "总体结构图", width: 90%) <fig-arch>
+#fig(image("assets/demo.png", width: 90%), caption: "总体结构图") <fig-arch>
 如 @fig-arch 所示。
 
 #tbl(
@@ -72,6 +72,10 @@ typst compile main.typ
 - **表格跨页**：长表格自动续排；
 - **代码**：灰色底纹（Word 模板要求），Consolas 等宽字体 + 语法高亮；
 - **末页**："·指导教师评定意见·"页眉 + 楷体"一、原创性声明"+ 手写签名位。
+
+> [!NOTE]
+> `fig()` 的第一个参数是 `content`（直接传 `image(...)`），图片路径在调用侧解析，
+> 因此可以引用项目里的任意图片；包内资源（封面校名图等）不受影响。
 
 ## 与 Word 模板的差异
 

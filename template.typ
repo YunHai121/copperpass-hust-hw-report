@@ -308,12 +308,13 @@
 // 供用户调用的辅助函数
 // =====================================================================
 
-// 插图：#fig("assets/xx.png", caption: "总体结构图")<fig-xx>
+// 插图：#fig(image("assets/xx.png", width: 90%), caption: "总体结构图")<fig-xx>
+// 第一个参数直接传 image()/box() 等 content（图片路径由用户侧解析，包内不限定位置）
 // 正文引用：如 @fig-xx 所示
-#let fig(path, caption: "", width: 80%) = figure(
-  image(path, width: width),
+#let fig(body, caption: "", kind: image) = figure(
+  body,
   caption: caption,
-  kind: image,
+  kind: kind,
   supplement: [图],
   numbering: _fig-num,
 )

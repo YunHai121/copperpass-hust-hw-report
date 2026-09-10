@@ -3,7 +3,7 @@
 // 由 typst init 自动生成。把下方 report.with(...) 中的信息改成自己的，
 // 然后按章节撰写报告即可。编译：typst compile main.typ --font-path .
 // =====================================================================
-#import "@preview/hust-hw-report:0.1.0": *
+#import "@preview/copperpass-hust-hw-report:0.1.0": *
 
 #show: report.with(
   title: "5段流水CPU设计",        // 题目
@@ -17,8 +17,7 @@
   course: "硬件综合训练",          // 封面蓝条左侧文字
   doc-type: "课程设计报告",        // 封面蓝条右侧文字
   declaration: true,             // 末尾自动生成"原创性声明"页
-  // signature: image("assets/signature.png", height: 0.9cm),  // 手写签名（可选）
-)
+  // signature: image("assets/signature.png", height: 0.9cm),  // 手写签名（可选）)
 
 = 课程设计概述
 
@@ -64,7 +63,7 @@
 
 总体结构图如@fig-arch 所示。
 
-#fig("assets/demo-figure.png", caption: "总体结构图", width: 90%) <fig-arch>
+#fig(image("assets/demo-figure.png", width: 90%), caption: "总体结构图") <fig-arch>
 
 === 主要功能部件
 

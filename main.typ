@@ -69,7 +69,7 @@
 
 总体结构图如@fig-arch 所示。（注意设计阶段只需要简单的原理示意图）
 
-#fig("assets/demo-figure.png", caption: "总体结构图")<fig-arch>
+#fig(image("assets/demo-figure.png", width: 90%), caption: "总体结构图")<fig-arch>
 
 === 主要功能部件
 
